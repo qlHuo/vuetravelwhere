@@ -6,9 +6,12 @@ import router from './router'
 // 引入fastClick文件
 import fastClick from 'fastclick'
 // 引入初始化样式文件
-import './assets/styles/reset.css'
+// import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 解决移动端border一像素的问题
-import './assets/styles/border.css'
+import 'styles/border.css'
+// 引入字体图标
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
