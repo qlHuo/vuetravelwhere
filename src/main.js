@@ -12,10 +12,16 @@ import 'styles/reset.css'
 import 'styles/border.css'
 // 引入字体图标
 import 'styles/iconfont.css'
+// 引入 vue-awesome-swiper 插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import style
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
+
 fastClick.attach(document.body)
 
+Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
