@@ -4,7 +4,7 @@
         <swiper-slide v-for="(page,index) in pages" :key="index">
           <div class="icon" v-for="item in page" :key="item.id">
             <img class="icon-img" :src="item.imgUrl">
-            <p>{{item.imgDesc}}</p>
+            <p>{{item.desc}}</p>
           </div>
         </swiper-slide>
       </swiper>
@@ -19,61 +19,10 @@ export default {
     return {
       swiperOptions: {
         autoplay: false
-      },
-      iconsList: [
-        {
-          id: '0001',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/piao.png',
-          imgDesc: '景点门票'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/hotel.png',
-          imgDesc: '酒店'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/train.png',
-          imgDesc: '火车票'
-        },
-        {
-          id: '0004',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/flight.png',
-          imgDesc: '机票'
-        },
-        {
-          id: '0005',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/package.png',
-          imgDesc: '度假'
-        },
-        {
-          id: '0006',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/piao.png',
-          imgDesc: '景点门票'
-        },
-        {
-          id: '0007',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/hotel.png',
-          imgDesc: '酒店'
-        },
-        {
-          id: '0008',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/train.png',
-          imgDesc: '火车票'
-        },
-        {
-          id: '0009',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/train.png',
-          imgDesc: '火车票'
-        },
-        {
-          id: '0010',
-          imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/piao.png',
-          imgDesc: '景点门票'
-        }
-      ]
+      }
     }
   },
+  props: ['iconsList'],
   computed: {
     // icons 分页
     pages () {

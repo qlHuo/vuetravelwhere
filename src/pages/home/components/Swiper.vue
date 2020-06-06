@@ -1,7 +1,7 @@
 <template>
   <div class="warpper">
-    <swiper :options="swiperOptions" style="touch-action: none;">
-      <swiper-slide v-for="item in swiperList" :key="item.id">
+    <swiper :options="swiperOptions" style="touch-action: none;" v-if="showSwiper">
+      <swiper-slide v-for="item in list" :key="item.id">
         <img
           :src="item.imgUrl"
           class="swiper-img"
@@ -21,19 +21,16 @@ export default {
         pagination: '.swiper-pagination',
         loop: true,
         autoplay: 2000
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/swiper1.jpg'
-      },
-      {
-        id: '0002',
-        imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/swiper2.jpg'
-      },
-      {
-        id: '0003',
-        imgUrl: 'https://gitee.com/aurorapic/BlogPic/raw/master/img/swiper3.jpg'
-      }]
+      }
+    }
+  },
+  // props: {
+  //   list: Array
+  // }
+  props: ['list'],
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }

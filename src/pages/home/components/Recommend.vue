@@ -17,41 +17,7 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1503/d5/d5e74437b7fd4e73.water.jpg_228x168_75e44d7d.jpg',
-        title: 'Hello Kitty主题公园',
-        desc: 'Hello Kitty主题公园等你来玩儿'
-      },
-      {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1503/d5/d5e74437b7fd4e73.water.jpg_228x168_75e44d7d.jpg',
-        title: 'Hello Kitty主题公园',
-        desc: 'Hello Kitty主题公园等你来玩儿'
-      },
-      {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1503/d5/d5e74437b7fd4e73.water.jpg_228x168_75e44d7d.jpg',
-        title: 'Hello Kitty主题公园',
-        desc: 'Hello Kitty主题公园等你来玩儿'
-      },
-      {
-        id: '0004',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1503/d5/d5e74437b7fd4e73.water.jpg_228x168_75e44d7d.jpg',
-        title: 'Hello Kitty主题公园',
-        desc: 'Hello Kitty主题公园等你来玩儿'
-      },
-      {
-        id: '0005',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1503/d5/d5e74437b7fd4e73.water.jpg_228x168_75e44d7d.jpg',
-        title: 'Hello Kitty主题公园',
-        desc: 'Hello Kitty主题公园等你来玩儿'
-      }
-      ]
-    }
-  }
+  props: ['recommendList']
 }
 </script>
 
