@@ -2,8 +2,15 @@
     <div>
         <city-header></city-header>
         <city-search></city-search>
-        <city-list :cities='cities' :hotCities="hotCities"></city-list>
-        <city-alphabet :cities='cities'></city-alphabet>
+        <city-list
+          :cities='cities'
+          :hotCities="hotCities"
+          :letter='letter'
+        ></city-list>
+        <city-alphabet
+          :cities='cities'
+          @letterChange="handleLetterChange">
+        </city-alphabet>
     </div>
 </template>
 
@@ -25,7 +32,8 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   mounted () {
@@ -35,11 +43,15 @@ export default {
     async getCityInfo () {
       // axios 请求返回的是一个promise对象
       const { data: res } = await axios.get('/api/city.json')
-      console.log(res)
+      // console.log(res)
       if (res.ret && res.data) {
         this.cities = res.data.cities
         this.hotCities = res.data.hotCities
       }
+    },
+    handleLetterChange (letter) {
+      this.letter = letter
+      // console.log(letter)
     }
   }
 }
