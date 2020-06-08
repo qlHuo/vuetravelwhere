@@ -4,8 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-// 引入fastClick文件
-import fastClick from 'fastclick'
+
 // 引入初始化样式文件
 // import './assets/styles/reset.css'
 import 'styles/reset.css'
@@ -19,8 +18,6 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
-
-fastClick.attach(document.body)
 
 Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
