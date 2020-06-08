@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 // 引入fastClick文件
 import fastClick from 'fastclick'
 // 引入初始化样式文件
@@ -26,6 +27,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App
   },
