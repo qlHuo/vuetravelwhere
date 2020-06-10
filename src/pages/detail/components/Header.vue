@@ -23,17 +23,17 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     // 由于是为window绑定的事件，所以这个事件会在页面的任何地方都能使用，因此需要解绑事件
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
       // console.log('scroll')
-      const top = document.documentElement.scrollTop
+      const top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
